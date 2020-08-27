@@ -18,7 +18,7 @@
 2. git bash 설치 완료 후 레포지토리와 연동할 폴더를 우클릭합니다.
 3. 우클릭 시에 git bash 가 보이는데 클릭해줍니다.
 4. git init 을 입력합니다. 
-5. git remote add origin https://github.com/minwongi/myrepository을 입력합니다. 
+5. git remote add origin https://github.com/minwongi/myrepository.git을 입력합니다. 
 6. 이렇게 하면 레포지토리와 폴더가 연동되었고, 레포지토리에 올릴 시에는 git pull 이 선행되어야합니다.
 7. 아래 주의 사항을 읽어주시면 됩니다.
 
