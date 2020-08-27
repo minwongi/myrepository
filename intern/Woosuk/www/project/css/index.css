@@ -1,0 +1,197 @@
+@charset "UTF-8";
+* { box-sizing: border-box; }
+html,body{margin:0;padding:0}
+body{font-family: 'Noto Sans KR', sans-serif;}
+ul,li,h1,h2,h3,h4{margin:0;padding:0;list-style:none}
+.wrap{width: 80%;}
+a{color:#fff; text-decoration: none;}
+a:hover{color: #fff;}
+a:active{color: #fff;}
+
+div.wrap{width: 100%; height: 120px;}
+div.wrap div.img{width: 30vw; height: 30vw; background: url("../img/logo2.svg")center no-repeat; background-size: contain; margin: 33vh auto;}
+div.wrap div.text{text-align: center; font-size: 4.3vw; color: #0c4da2; font-weight: bold;}
+
+div.wrap div.menu{display:block;}
+div.wrap div.menu.active{left:0;}
+div.wrap div.menu{width: 100%; height: 100%; background: rgba(0,0,0,.5); position: fixed; top: 0; left: -100%;-webkit-transition: all .5s ease-in-out;-moz-transition: all .5s ease-in-out;-ms-transition: all .5s ease-in-out;-o-transition: all .5s ease-in-out;transition: all .5s ease-in-out;z-index:8}
+div.wrap div.menu div.menubox{width: 80%; position: absolute; top: 0; left: 0; height: 100%; background: #fff; font-size: 5vw; overflow: auto;}
+div.wrap div.menu div.menubox div.top{width: 100%; height: 11vw; border-bottom: 3px solid #205eb0;}
+div.wrap div.menu div.menubox div.top div{width:34vw; height: 7vw; background: url("../img/logo.svg")center no-repeat; background-size: contain; margin: 3vw 0 0 4vw; }
+div.wrap div.menu div.menubox div.list0{width:100%; height: 9vw; border-bottom: 1px solid #e8e5e5;}
+div.wrap div.menu div.menubox div.list0 select{border:none;font-size:1em;width:100%;height:9vw;padding:2vw;background-color:#ddd;}
+div.wrap div.menu div.menubox div.list{width: calc(100% - 4vw); margin: 2vw 2vw;}
+div.wrap div.menu div.menubox div.list ul{font-size: 3.5vw;}
+div.wrap div.menu div.menubox div.list ul li {padding: 2vw 0; color: #000;margin:1vw 0;}
+div.wrap div.menu div.menubox div.list ul li a{background: none;}
+div.wrap div.menu div.menubox div.list ul li span{margin: 2vw 0; color: #000;}
+
+div.wrap div.menu div.menubox div.menufooter{width: 100%; height: 15vw; background: url("../img/bac.png")center no-repeat; color: #fff; position: absolute; bottom: 0; padding-top: 2.5vw; background-size: cover;}
+div.wrap div.menu div.menubox div.menufooter div:first-child{font-size: 2.5vw; text-align: center;}
+div.wrap div.menu div.menubox div.menufooter div:last-child{font-size: 4vw; text-align: center;}
+
+header{width: 100%; height: 120px; border-bottom: 1px solid #e8e5e5;}
+header div.wrap{display: flex; justify-content: space-between;}
+header .wrap div.my{width: 120px;padding:20px; height: 100%; background: url("../img/icon01.png")center no-repeat; background-size: 80px 80px; }
+header .wrap div.my a{width: 100%; height: 100%; display: block;}
+/*header .wrap a:first-child{background: none;}*/
+header a.logo{width: 30%; height: 100%; background: url("../img/logo.svg")center no-repeat; background-size: contain; }
+header div.nav{width: 120px;padding:20px; height: 100%;position:relative;}
+header div.nav span{-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-ms-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
+header div.nav span:first-child{width:80px;background:#464646;position:absolute;height:12px;border-radius:20px;top:30px;display:inline-block;z-index:99}
+header div.nav span:nth-child(2){width:80px;background:#464646;position:absolute;height:12px;border-radius:20px;top:53px;display:inline-block;z-index:99}
+header div.nav span:last-child{width:80px;background:#464646;position:absolute;height:12px;border-radius:20px;top:77px;display:inline-block;z-index:99}
+header div.nav.active span:first-child{width:80px;background:#fff;top:53px;-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);-ms-transform: rotate(45deg);-o-transform: rotate(45deg);transform: rotate(45deg);}
+header div.nav.active span:nth-child(2){opacity:0;}
+header div.nav.active span:last-child{width:80px;background:#fff;top:53px;-webkit-transform: rotate(-45deg);-moz-transform: rotate(-45deg);-ms-transform: rotate(-45deg);-o-transform: rotate(-45deg);transform: rotate(-45deg);}
+
+div.wrap01{width: 100%; height: auto;position: absolute;top:50%;left:0;-webkit-transform: translateY(-50%);-moz-transform: translateY(-50%);-ms-transform: translateY(-50%);-o-transform: translateY(-50%);transform: translateY(-50%);}
+div.wrap01 div.box{width: 90%; margin: 0 auto; height: auto; font-size: 3vw;}
+div.wrap01 h1{margin: 4vh auto; text-align: center; font-size: 5vw;}
+div.wrap01 div.box01{color: #858585; width: 100%;  border: 1px solid #e8e5e5; height: 10vw; line-height: 90px; border-radius: 10px;}
+div.wrap01 div.box01 input:first-child{padding-left: 30px; color: #858585; width: 75%; height: 100%; float: left; line-height: 90px; border-radius: 10px; border: none; font-size: 1em;}
+div.wrap01 div.box01 input:last-child{font-size: 1em; width: 25%; height: 100%; float: left; background: #e8e5e5; border: none; text-align: center;}
+div.wrap01 div.box2 input{width: 100%; height: 10vw; border-radius: 10px; color: #858585; width: 100%; padding-left: 30px; border: 1px solid #e8e5e5; line-height: 90px; margin: 2vw 0; font-size: 1em}
+div.wrap01 div.box03 input,
+div.wrap01 div.box04 input,
+div.wrap01 div.box07 input,
+div.wrap01 div.box05 input{font-size: 1em; border-radius: 10px; color: #858585; width: 100%; padding-left: 30px; border: 1px solid #e8e5e5; height: 10vw; line-height: 90px; margin: 0 0 2vw 0;}
+div.wrap01 div.box06{border-radius: 10px; color: #858585; width: 100%; padding-left: 30px; border: 1px solid #e8e5e5; height: 90px; line-height: 90px;}
+div.wrap01 div.box06 div:first-child{width: 75%; float: left;}
+div.wrap01 div.box06 div:last-child{width: 25%; float: left; background: #e8e5e5; text-align: center;}
+div.wrap01 div.box07 input{margin: 2vw 0 0 0;}
+div.wrap01 div.box08{border-radius: 10px; color: #3e3d3d; width: 100%; padding-left: 30px; border: 1px solid #e8e5e5; height: 10vw; line-height: 10vw; margin: 2vw 0; background: #e8e5e5;}
+div.wrap01 div.box08 span{width: 5vw; height: 100%; display: block; background: url("../img/icon0.png")center no-repeat; background-size: contain; float: right; margin-right: 3vw;}
+div.wrap01 div.box06{color: #858585; width: 100%;  border: 1px solid #e8e5e5; height: 10vw; line-height: 90px; border-radius: 10px;}
+div.wrap01 div.box06 input:first-child{padding-left: 30px; color: #858585; width: 75%; height: 100%; float: left; line-height: 90px; border-radius: 10px; border: none; font-size: 1em;}
+div.wrap01 div.box06 input:last-child{font-size: 1em; width: 25%; height: 100%; float: left; background: #e8e5e5; border: none; text-align: center;}
+div.wrap01 .box09{border-radius: 10px; color: #fff; width: 100%; height: 10vw; line-height: 10vw; margin: 6vw 0 5vw 0; background: #0c4da2; text-align: center;font-size:1em;border:none;}
+div.wrap01 .box10{border-radius: 10px; color: #000; width: 100%; height: 10vw; line-height: 10vw; margin: 6vw 0 0; background: #ddd; text-align: center;font-size:1em;border:none;}
+footer{width: 100%; height: 15vh; background: #333;}
+
+
+div.wrap02{width: 100%; height: auto;}
+div.wrap02 div.box{width: 90%; margin: 0 auto; height: auto; font-size: 3vw;}
+div.wrap02 h1{margin: 8vh auto 12vw; text-align: center; font-size: 6vw;}
+div.wrap02 div.box input{font-size: 1.1em; border-radius: 10px; color: #858585; width: 100%; padding-left: 30px; border: 1px solid #e8e5e5; height: 10vw; line-height: 90px; margin: 5px 0;}
+div.wrap02 div.box div.bt{font-size: 1.1em; border-radius: 10px; color: #fff; background: #0550ad; width: 100%; border: 1px solid #e8e5e5; height: 11vw; line-height: 10vw; margin: 5vw 0; text-align: center;}
+div.wrap02 div.box div.text {text-align: center; width: 100%; font-size: 1.1em; margin-top: 60px; margin-bottom: 46vw; color: #000;}
+div.wrap02 div.box div.text a:nth-child(2){border-right: 1px solid #e8e5e5; border-left: 1px solid #e8e5e5; padding: 0 4vw; color: #000;}
+div.wrap02 div.box div.text a:first-child{padding-right: 2vw; color: #000;}
+div.wrap02 div.box div.text a:last-child{padding-left: 2vw; color: #000;}
+
+
+div.wrap03{width: 100%; height: auto;}
+div.wrap03 div.box{width: 90%; margin: 0 auto 23vh; height: auto; font-size: 2em;}
+div.wrap03 div.box div.no1{padding: 15vh 0 4vh 0; text-align: center; color: #0c4da2; font-size: 4.3vw;}
+div.wrap03 div.box div.no2{width: 30vw; height: 30vw; background: url("../img/logo2.svg")center no-repeat; background-size: contain; margin: 0 auto 4vh;}
+div.wrap03 div.box div.no3{width: 100%; text-align: center; margin-bottom: 6vh; font-size: 4.3vw;}
+
+div.wrap04{width: 100%; height: auto;}
+div.wrap04 div.group{width: 100%; height: 13vw; border-bottom: 1px solid #e8e5e5;}
+div.wrap04 div.group div.bt{width: 7vw; height: 100%; background: url("../img/icon03.png")center no-repeat; background-size: contain; float: left; margin-left: 9vw;}
+div.wrap04 div.group h1{width: 30vw; height: 100%; margin: 0 auto; text-align: center; font-size: 4.0vw; padding: 3vw;}
+div.wrap04 div.box{width: 90%; margin: 0 auto; height: auto; font-size: 2em;}
+div.wrap04 div.box ul{width: 100%; height: 24.5vw; display: flex; flex-wrap: wrap; border: 1px solid #e8e5e5; margin: 3vh 0 1vh; font-size: 3.5vw;}
+div.wrap04 div.box ul li{width: 33.3%; height: 12vw; text-align: center; line-height: 11vw;}
+div.wrap04 div.box ul li:nth-child(3),
+div.wrap04 div.box ul li:nth-child(4),
+div.wrap04 div.box ul li:nth-child(6),
+div.wrap04 div.box ul li:nth-child(5){border-top: 1px solid #e8e5e5;}
+div.wrap04 div.box ul li:nth-child(2),
+div.wrap04 div.box ul li:nth-child(5){border-right: 1px solid #e8e5e5; border-left: 1px solid #e8e5e5; }
+div.wrap04 div.box div.group2{width: 100%; height: auto; position: relative;}
+div.wrap04 div.box div.group2 input{width: 100%; height: 10vw; border: 1px solid #e8e5e5; font-size: 4vw; padding-left: 30px; color: #e8e5e5; position: relative;}
+div.wrap04 div.box div.group2 div.bt{position: absolute; width: 7vw; height: 100%; top: 0; right: 20px; background: url("../img/icon04.png")center no-repeat; background-size: contain; }
+div.wrap04 div.box div.group3{width: 100%; height: 30vh;}
+
+
+div.wrap05{width: 100%; height: auto;}
+div.wrap05 div.group{width: 100%; height: 13vw; border-bottom: 1px solid #e8e5e5;} /*이부분*/
+div.wrap05 div.group div.bt{width: 7vw; height: 100%; background: url("../img/icon03.png")center no-repeat; background-size: contain; float: left; margin-left: 9vw;}
+div.wrap05 div.group h1{width: 100%; height: 100%; margin: 0 auto; text-align: center; font-size: 4.3vw; padding: 3vw;}
+div.wrap05 div.box{width: 90%; margin: 0 auto; height: auto; font-size: 2em;}
+div.wrap05 div.box ul{width: 100%; height: 11vw; padding-top: 2vw;  display: flex; flex-wrap: wrap; border: 1px solid #e8e5e5; margin: 3vh 0 1vh;}
+div.wrap05 div.box ul li{width: 50%; height: 100%; text-align: center; font-size: 4vw;}
+div.wrap05 div.box ul li:first-child{border-right: 1px solid #e8e5e5;}
+div.wrap05 div.box div.group2{width: 100%; height: 11vw; position: relative;}
+div.wrap05 div.box div.group2 input{width: 100%; height: 100%; border: 1px solid #e8e5e5; font-size: 4vw; padding-left: 30px; color: #e8e5e5; position: relative;}
+div.wrap05 div.box div.group2 div.bt{position: absolute; width: 8vw; height: 100%; top: 2px; right: 20px; background: url("../img/icon04.png")center no-repeat; background-size: contain; }
+div.wrap05 div.box div.group3{width: 100%; height: 100%; margin-bottom: 27vh; border-top: 4px solid #0c4da2; margin-top: 20px;}
+div.wrap05 div.box div.group3 ul{margin-top: 0px; border-bottom: 1px solid #555; height: 16vw; border-right: none; border-left: none; padding-top: 0;}
+div.wrap05 div.box div.group3 ul li{ width: 100%; display: flex; flex-wrap: nowrap; border-right: none; }
+div.wrap05 div.box div.group3 ul li div.no1{width: 14%;}
+div.wrap05 div.box div.group3 ul li div.no2{width: 14%;}
+div.wrap05 div.box div.group3 ul li div.no3{width: 40%;}
+div.wrap05 div.box div.group3 ul li div.no4{width: 15%;}
+div.wrap05 div.box div.group3 ul li div.no5{width: 15%;}
+div.wrap05 div.box div.group3 ul li div.no1 div{width: 13vw; height: 13vw; border-radius: 50%; background: #333; display: block; margin: 1.5vw auto;}
+div.wrap05 div.box div.group3 ul li div.no2 div{width: 100%; height: 7vw; background: #0c4da2; display: block; margin: 4vw 1vw 0 2vw; color: #fff; font-size: 3vw; line-height: 6vw; letter-spacing: 7px; text-align: center; padding-left: 1vw}
+div.wrap05 div.box div.group3 ul li div.no3{text-align: left; padding-left: 5vw; padding-top: 3vw; font-size: 3vw}
+div.wrap05 div.box div.group3 ul li div.no3 span:last-child{font-size: 3.5vw;}
+div.wrap05 div.box div.group3 ul li div.no4 div{width: 9vw; height: 15vw; background: url("../img/icon05.png")center no-repeat; display: block; background-size: contain; margin-left: 6vw; color: #fff; font-size: 25px; line-height: 40px; letter-spacing: 7px; text-align: center;}
+div.wrap05 div.box div.group3 ul li div.no5 div{width: 8vw; height: 15vw; background: url("../img/icon06.png")center no-repeat; display: block; margin: 0 auto; background-size: contain; color: #fff; font-size: 25px; line-height: 40px; letter-spacing: 7px; text-align: center; }
+div.wrap05 div.box div.group3 div.bt{width: 20vw; border-radius: 5px; height: 8vw; border: 1px solid #0c4da2; display: block; margin: 5vh auto;
+color: #0c4da2; text-align: center; line-height: 7.5vw; font-size: 4vw}
+
+div.wrap06{width: 100%; height: auto;}
+div.wrap06 div.group{width: 100%; height: 13vw; border-bottom: 1px solid #e8e5e5;}
+div.wrap06 div.group div.bt{width: 7vw; height: 100%; background: url("../img/icon03.png")center no-repeat; background-size: contain; float: left; margin-left: 9vw;}
+div.wrap06 div.group h1{width: 30vw; height: 100%; margin: 0 auto; text-align: center; font-size: 4.1vw; padding: 3vw;}
+div.wrap06 div.box{width: 90%; margin: 0 auto; height: auto; font-size: 2em;}
+div.wrap06 div.box ul{width: 100%; height: 11vw; padding-top: 2vw;  display: flex; flex-wrap: wrap; border: 1px solid #e8e5e5; margin: 3vh 0 1vh;}
+div.wrap06 div.box ul li{width: 50%; height: 100%; text-align: center; font-size: 4.3vw;}
+div.wrap06 div.box ul li:first-child{border-right: 1px solid #e8e5e5;}
+div.wrap06 div.box div.group2{width: 100%; height: 11vw; position: relative;}
+div.wrap06 div.box div.group2 input{width: 100%; height: 100%; border: 1px solid #e8e5e5; font-size: 4.3vw; padding-left: 30px; color: #e8e5e5; position: relative;}
+div.wrap06 div.box div.group2 div.bt{position: absolute; width: 8vw; height: 100%; top: 2px; right: 20px; background: url("../img/icon04.png")center no-repeat; background-size: contain; }
+div.wrap06 div.box div.group3{width: 100%; height: 100%; margin-bottom: 27vh; border-top: 4px solid #0c4da2; margin-top: 20px;}
+div.wrap06 div.box div.group3 ul{margin-top: 0px; border-bottom: 1px solid #555; height: 16vw; border-right: none; border-left: none; padding-top: 0;}
+div.wrap06 div.box div.group3 ul li{ width: 100%; display: flex; flex-wrap: nowrap; border-right: none; }
+div.wrap06 div.box div.group3 ul li div.no1{width: 14%;}
+div.wrap06 div.box div.group3 ul li div.no3{width: 56%;}
+div.wrap06 div.box div.group3 ul li div.no4{width: 15%;}
+div.wrap06 div.box div.group3 ul li div.no5{width: 15%;}
+div.wrap06 div.box div.group3 ul li div.no1 div{width: 13vw; height: 13vw; border-radius: 50%; background: #333; display: block; margin: 1.5vw auto;}
+div.wrap06 div.box div.group3 ul li div.no2 div{width: 100%; height: 7vw; background: #0c4da2; display: block; margin: 4vw 1vw 0 2vw; color: #fff; font-size: 3vw; line-height: 6vw; letter-spacing: 7px; text-align: center; padding-left: 1vw}
+div.wrap06 div.box div.group3 ul li div.no3{text-align: left; padding-left: 5vw; padding-top: 3vw; font-size: 3vw}
+div.wrap06 div.box div.group3 ul li div.no3 span:last-child{font-size: 3.5vw;}
+div.wrap06 div.box div.group3 ul li div.no4 div{width: 9vw; height: 15vw; background: url("../img/icon05.png")center no-repeat; display: block; background-size: contain; margin-left: 6vw; color: #fff; font-size: 25px; line-height: 40px; letter-spacing: 7px; text-align: center;}
+div.wrap06 div.box div.group3 ul li div.no5 div{width: 8vw; height: 15vw; background: url("../img/icon06.png")center no-repeat; display: block; margin: 0 auto; background-size: contain; color: #fff; font-size: 25px; line-height: 40px; letter-spacing: 7px; text-align: center; }
+div.wrap06 div.box div.group3 div.bt{width: 20vw; border-radius: 5px; height: 8vw; border: 1px solid #0c4da2; display: block; margin: 5vh auto;
+color: #0c4da2; text-align: center; line-height: 7.5vw; font-size: 4vw}
+
+div.wrap07 div.box{width: 90%; margin-left: auto; margin-right: auto; margin-top: 0 auto; height: 40vh; font-size: 2em; border-top: 4px solid #0c4da2; margin-top: 2vw; text-align: center;}
+
+div.wrap08{width: 100%; height: auto;text-align: center;}
+div.wrap08 div.box{width: 100%;background: url(../img/bac.png) center no-repeat;background-size: cover;/* height: 40vh; */font-size: 2em;border-top: 8px solid #e5e4e4;color: #fff;padding: 70px 10px;border-radius: 0 0 100px 100px;}
+div.wrap08 div.box h3{font-size: 0.6em;}
+div.wrap08 div.box h1 span{font-size: 0.8em;}
+div.wrap08 div.box p{font-size: 0.5em;}
+
+div.wrap09{width: 100%; height: auto;}
+div.wrap09 div.group{width: 100%; height: 13vw; border-bottom: 1px solid #e8e5e5;}
+div.wrap09 div.group div.bt{width: 7vw; height: 100%; background: url("../img/icon03.png")center no-repeat; background-size: contain; float: left; margin-left: 9vw;}
+div.wrap09 div.group h1{width: 70vw; height: 100%; margin: 0 auto; text-align: center; font-size: 4.3vw; padding: 3vw;}
+div.wrap09 div.box{width: 90%; margin: 0 auto; height: auto; font-size: 2em;}
+div.wrap09 div.box ul{width: 100%; height: 11vw; padding-top: 2vw;  display: flex; flex-wrap: wrap; border: 1px solid #e8e5e5; margin: 3vh 0 1vh;}
+div.wrap09 div.box ul li{width: 50%; height: 100%; text-align: center; font-size: 4.3vw;}
+div.wrap09 div.box ul li:first-child{border-right: 1px solid #e8e5e5;}
+div.wrap09 div.box div.group2{width: 100%; height: 11vw; position: relative;}
+div.wrap09 div.box div.group2 input{width: 100%; height: 100%; border: 1px solid #e8e5e5; font-size: 4.3vw; padding-left: 30px; color: #e8e5e5; position: relative;}
+div.wrap09 div.box div.group2 div.bt{position: absolute; width: 8vw; height: 100%; top: 2px; right: 20px; background: url("../img/icon04.png")center no-repeat; background-size: contain; }
+div.wrap09 div.box div.group3{width: 100%; height: 100%; margin-bottom: 27vh; border-top: 4px solid #0c4da2; margin-top: 20px;}
+div.wrap09 div.box div.group3 ul{margin-top: 0px; border-bottom: 1px solid #555; height: 10vw; border-right: none; border-left: none; padding-top: 0;}
+div.wrap09 div.box div.group3 ul li{ width: 100%; display: flex; flex-wrap: nowrap; border-right: none; }
+div.wrap09 div.box div.group3 ul li div.no1{width: 20%;}
+div.wrap09 div.box div.group3 ul li div.no2{width: 5%;}
+div.wrap09 div.box div.group3 ul li div.no3{width: 20%;}
+div.wrap09 div.box div.group3 ul li div.no4{width: 55%;}
+div.wrap09 div.box div.group3 ul li div.no1{text-align: left; padding-left: 5vw; padding-top: 3vw; font-size: 2.5vw}
+div.wrap09 div.box div.group3 ul li div.no2{text-align: left; padding-left: 0vw; padding-top: 3vw; font-size: 2.5vw}
+div.wrap09 div.box div.group3 ul li div.no3{text-align: left; padding-left: 0vw; padding-top: 3vw; font-size: 2.5vw}
+div.wrap09 div.box div.group3 ul li div.no4{text-align: left; padding-left: 5vw; padding-top: 3vw; font-size: 2.5vw}
+div.wrap09 div.box div.group3 div.bt{width: 20vw; border-radius: 5px; height: 8vw; border: 1px solid #0c4da2; display: block; margin: 5vh auto;
+    color: #0c4da2; text-align: center; line-height: 7.5vw; font-size: 4vw}
+div.wrap09 div.box ul li div.list0{width:100%; height: 100%; border-bottom: 2px solid #e8e5e5;}
+div.wrap09 div.box ul li div.list0 select{border:none;font-size:1em; width:100%;height:9vw;padding-left: 20vw;background-color:#FFFFFF;}

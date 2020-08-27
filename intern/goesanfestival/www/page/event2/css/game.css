@@ -1,0 +1,161 @@
+
+        body{
+            background-image:url('img/background1.png');
+            background-repeat:no-repeat;
+            background-position:center center;
+            background-size:100% 98%;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            padding: 40px;
+            /* background: #f5f7fb; */
+            /* background: red; */
+        }
+
+        .box{
+            width: 80%;
+            padding: 40px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: black;
+            text-align: center;
+        }
+
+        .box h1 {
+            color: white;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .box input[type = "text"],.box input[type = "password"]{
+            border:0;
+            background: white;
+            display: block;
+            margin: 20px auto;
+            /* text-align: center; */
+            border:2px solid #8C8C8C;
+            padding: 14px 10px;
+            width: 300px;
+            outline: none;
+            color: black;
+            border-radius: 24px;
+            transition: 0.25s;
+        }
+
+        .box input[type = "text"]:focus,.box input[type = "password"]:focus{
+            /* width: 400px; */
+            border-color: #2ecc71;
+        }
+
+        .box input[type = "submit"]{
+            border:0;
+            background: red;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            border:2px solid red;
+            padding: 14px 135px;
+            outline: none;
+            color: white;
+            border-radius: 24px;
+            transition: 0.25s;
+            cursor: pointer;
+        }
+        
+        .btn {
+            display: block;
+            width: 200px;
+            height: 50px;
+            background: #4ac4f3;
+            text-decoration: none;
+            text-align: center;
+            line-height: 50px;
+            color: #fff;
+            border-radius: 50px;
+        }
+        
+        .popup {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 1000;
+            transform: translate(-50%,-50%);
+            width: 500px;
+            height: 500px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            background: #fff;
+            border-radius: 5px;
+            text-align: right;
+            padding: 20px;
+            box-sizing: border-box;
+            opacity: 0;
+            transition: all 0.5s;
+        }
+
+        .popup a {
+            color: grey;
+            text-decoration: none;
+        }
+
+        .popup:target {
+            opacity: 1;
+        }
+
+        .popup:target + .dim {
+            opacity: 1;
+            z-index: 2;
+        }
+
+        .dim {
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            opacity: 0;
+            transition: all 0.5s;
+        }
+
+        div .btn{
+            text-align: center;
+        }
+
+		#image {
+			position: relative;
+			margin: 10% 10%;
+			z-index: 1000;
+			width:50vh;
+            height:50vh;
+			margin:100 auto;
+        }
+        
+        .result_pop{
+            width:0;
+            height:0;
+            opacity:0;
+            position:absolute;
+            top:40%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            transition:all 0.2s ease-in-out;
+        }
+        .result_pop.active{
+            width:40%;
+            height:50vh;
+            background:#000;
+            opacity:1;
+            z-index:99999
+        }
+        /* #wraps.on{
+             background-color:rgba(0,0,0,6); 
+        } */
+        #wraps.on #wrap img {
+            opacity:0.5;
+            /* 0=> 완전히 투명인단계 */
+        }
+
+

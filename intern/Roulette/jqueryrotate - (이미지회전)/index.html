@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+	<title> prototype about roulette </title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="./js/jQueryRotateCompressed.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+	<style>
+		#image {
+			/*돌림판 위치*/
+			margin: 50px 50px;
+			z-index: 10;
+		}
+		#n_id {
+			/*계기판 바늘 위치*/
+			position: absolute;
+			left: 48%;
+			top: 75px;
+			z-index: 20;
+		}
+	</style>
+	<link rel="stylesheet" href="css/Modalstyle.css"> <!-- 모달창 css -->
+</head>
+
+<body>
+	<div style="text-align : center;">
+		<img src="img/roulettezz.png" id="image">
+		<img src="img/niddle.png" id="n_id">
+	</div>
+
+	<br>
+	<input type='button' value='시작' id='start_btn'>
+	
+	<div id="result_id"></div>
+	<div id="result_id2"></div>
+	<div id="result_id3">
+	</div>
+	<script>
+		window.onload = function () {
+			var pArr = ["0", "1", "2", "3", "4", "5", "6", "7"]; // 여기 고침
+			$('#start_btn').click(function () {
+				rotation();
+			});
+
+			$('#image').click(function () {
+				rotation();
+			});
+
+			function rotation() {
+					
+				$("#image").rotate({
+					angle: 0,
+					// animateTo: 360 * 10000 + randomize(0, 360),
+					
+						// if()
+					animateTo: 360,
+					center: ["50%", "50%"], // 돌릴때 가운데 지점 50%,50% -> 이미지의 중간
+					easing: $.easing.easeInOutElastic,
+					callback: function () {
+						var n = $(this).getRotateAngle();
+						endAnimate(n);
+					},
+					duration: 5000
+				});
+			}
+
+			function endAnimate($n) {
+				var n = $n;
+				$('#result_id').html("<p>움직인각도:" + n + "</p>");
+				var real_angle = n % 360;
+				var part = Math.floor(real_angle / 45);
+
+				$('#result_id2').html("<p>상품범위:" + part + "</p>");
+				if (part < 1) {
+					$('#result_id3').html("<p>당첨내역:" + pArr[0] + "</p>");
+					// alert("상품범위는 " + part + "입니다.");
+					// Swal.fire(
+					// 	'축하합니다 ! ' + part,
+					// 	'입니다!',
+					// 	'success'
+					// )
+					return;
+				}
+
+				if (part >= 10) {
+					$('#result_id3').html("<p>당첨내역:" + pArr[pArr.length - 1] + "</p>");
+					// Swal.fire(
+					// 	'축하합니다 ! ' + part,
+					// 	'입니다!',
+					// 	'success'
+					// )
+					return;
+				}
+
+				$('#result_id3').html("<p>당첨내역:" + pArr[part] + "</p>");
+				// alert("상품범위는 " + part + "입니다.");
+				// Swal.fire(
+				// 	'축하합니다 ! ' + part,
+				// 	'입니다!',
+				// 	'success'
+				// )
+			}
+			function randomize($min, $max) {
+				return Math.floor(Math.random() * ($max - $min + 1)) + $min;
+			}
+		};
+	</script>
+</body>
+
+</html>

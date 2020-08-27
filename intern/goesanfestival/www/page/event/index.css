@@ -1,0 +1,23 @@
+@charset "UTF-8";
+* { box-sizing: border-box; }
+html,body{margin:0;padding:0}
+body{font-family: 'Noto Sans KR', sans-serif;}
+ul,li,h1,h2,h3,h4{margin:0;padding:0;list-style:none}
+.wrap{width: 80%;}
+
+
+.sec_01{ width: 100%; height: 100%; center no-repeat;}
+.sec_01 .fixed{width: 1200px; height: 100%; margin: 0 auto; position: relative; }
+.sec_01 .box{width: 50%; height: 450px; border-radius: 50px; box-shadow: 11px 11px rgba(0,0,0,.3); margin: 0 auto; background: #fff; display: flex; flex-wrap: wrap; border: 4px solid #c6efef; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.box h2,
+.box p,
+.box div{width: 100%; }
+.box input{width: 80%; padding: 0 auto; border: 3px solid #e8e5e5; margin: 5px auto; font-size: 16px; color: #555;}
+.box h2{text-align: center; padding-top: 2vw; font-size: 28px;}
+.box p{text-align: center; font-size: 16px;}
+
+@media (max-width: 1024px){
+    body{background-image: url('../../img/background_phone.png')}
+    .sec_01 .fixed{width: 350px;}
+    .sec_01 .box{width: 100%;}
+}
