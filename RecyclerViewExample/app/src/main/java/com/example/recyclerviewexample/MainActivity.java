@@ -32,29 +32,21 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
                 diaryTextView.setVisibility(View.VISIBLE);
-                String smonth,sday;
-                String syear = Integer.toString(year);
-                if(month / 10 == 0){
-                    smonth = "0";
-                    smonth += Integer.toString(month+1);
-                } else {
-                    smonth = Integer.toString(month+1);
-                }
-                if(dayOfMonth / 10 == 0) {
-                    sday = "0";
-                    sday += Integer.toString(dayOfMonth);
-                } else {
-                    sday = Integer.toString(dayOfMonth);
-                }
-                diaryTextView.setText(syear+smonth+sday);
+
+                String date = Integer.toString(year) + cvt(Integer.toString(month)) + cvt(Integer.toString(dayOfMonth));
+                diaryTextView.setText(date);
 //                diaryTextView.setText(String.format("%d - %d - %d",year,month+1,dayOfMonth));
                 selecteddate = diaryTextView.getText().toString();
                 Intent intent = new Intent(MainActivity.this, ListActivity.class);
-                intent.putExtra("selecteddate", selecteddate);
+                intent.putExtra("selectedDate", date);
                 startActivity(intent); //List액티비티 이동
             }
         });
 
+    }
 
+    String cvt(String time){
+        if(time.length() <= 1) return "0" + time;
+        return time;
     }
 }
