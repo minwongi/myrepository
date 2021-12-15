@@ -1,0 +1,12 @@
+2021-12-11 16:50:00,333 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2021-12-11 19:58:26,328 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2021-12-11 23:50:20,075 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2021-12-12 18:55:44,859 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2021-12-12 19:52:57,318 [main] INFO  org.eclipse.jetty.server.Server - jetty-10.0.6; built: 2021-06-29T15:28:56.259Z; git: 37e7731b4b142a882d73974ff3bec78d621bd674; jvm 17.0.1+12-LTS-39
+2021-12-12 19:52:57,354 [main] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+2021-12-12 19:52:57,392 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@39109cf1{/wse,null,AVAILABLE}
+2021-12-12 19:52:57,415 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@7c03f429{HTTP/1.1, (http/1.1)}{0.0.0.0:56575}
+2021-12-12 19:52:57,433 [main] INFO  org.eclipse.jetty.server.Server - Started Server@58215f04{STARTING}[10.0.6,sto=0] @3585983ms
+2021-12-12 23:08:39,654 [Framework stop - Equinox Container: d971a76d-ae63-4867-b581-5c034c935bb7] INFO  org.eclipse.jetty.server.Server - Stopped Server@58215f04{STOPPING}[10.0.6,sto=0]
+2021-12-12 23:08:39,667 [Framework stop - Equinox Container: d971a76d-ae63-4867-b581-5c034c935bb7] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@7c03f429{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+2021-12-12 23:08:39,753 [Framework stop - Equinox Container: d971a76d-ae63-4867-b581-5c034c935bb7] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@39109cf1{/wse,null,STOPPED}

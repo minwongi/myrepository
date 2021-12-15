@@ -1,0 +1,5 @@
+root 엔터
+데이터베이스 USE BBS;
+show tables;
+desc bbs;
+desc user;
